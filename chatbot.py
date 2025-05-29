@@ -71,7 +71,7 @@ keywords = {
     "φροντιδα": ["φροντίδα", "φροντισω", "φροντιδα γατας", "φροντίδα γάτας", "υγιεινή γάτας", "κοινωνικοποίηση γάτας", "υγειονομική περίθαλψη γάτας", "φροντίδα για γάτες", "υγιεινή για γάτες", "διατροφή για γάτες", "άσκηση για γάτες"]
 }
 
-# Normalize keywords (χωρίς τόνους)
+
 def normalize_keywords(original_dict):
     cleaned = {}
     for topic, words in original_dict.items():
@@ -80,7 +80,7 @@ def normalize_keywords(original_dict):
 
 keywords = normalize_keywords(keywords)
 
-# Εύρεση απάντησης με fuzzy matching
+
 def find_answer(user_input):
     for topic, synonyms in keywords.items():
         for word in synonyms:
